@@ -1,0 +1,20 @@
+ <ul id="sidebar" class="nav nav-pills nav-stacked list-group " >
+ {% if not user.is_staff %}  
+    <li class="active"><a href="{% url 'salir' %}"><span class="glyphicon glyphicon-off"></span>  Desconectar</a></li>
+    <li><a href="{% url 'principal' %}" ><span class="glyphicon glyphicon-user"></span>  Detalles Matrícula</a></li>
+    {% if persona %}
+    <li><a href="{% url 'ver_cuotas' idp=persona.pk %}" ><span class="glyphicon glyphicon-edit"></span>  Cuenta Corriente</a></li>
+    {% endif %}
+    <li><a href="{% url 'obras_sociales' %}" ><span class="glyphicon glyphicon-th-large"></span>  Obras Sociales</a></li>   
+    <li><a href="{% url 'datos' %}" ><span class="glyphicon glyphicon-folder-open"></span>  Documentación</a></li>    
+ {% else %}  
+ 	<li class="active"><a href="{% url 'salir' %}" ><span class="glyphicon glyphicon-off"></span>  Desconectar</a></li>
+ 	<li><a href="{% url 'matriculados' %}" ><span class="fa fa-users"></span>  Matriculados</a></li>
+ 	<li><a href="/admin/"><span class="glyphicon glyphicon-briefcase"></span>  Admininstración</a></li>
+ 	<li><a href="{% url 'obras_sociales' %}" ><span class="glyphicon glyphicon-th-large"></span>  Obras Sociales</a></li>  
+    <li><a href="{% url 'datos' %}" ><span class="glyphicon glyphicon-folder-open"></span>  Documentación</a></li>
+    <li><a href="{% url 'subirArchivos' %}" ><span class="glyphicon glyphicon-upload"></span>  Subir Archivos</a></li>    
+ {% endif %}
+</ul>       
+
+

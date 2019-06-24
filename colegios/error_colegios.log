@@ -1,0 +1,41 @@
+[Tue Nov 14 08:29:11.445304 2017] [wsgi:error] [pid 21642:tid 139890832189184] [remote 127.0.0.1:33272] 442
+[Tue Nov 14 08:33:22.671005 2017] [wsgi:error] [pid 21642:tid 139890832189184] [remote 127.0.0.1:34352] 442
+[Tue Nov 14 08:39:11.245790 2017] [wsgi:error] [pid 21642:tid 139890832189184] [remote 127.0.0.1:35822] /home/grupogua/webapps/colegios/colegios/colegios/../media/Documentos/santafe
+[Tue Nov 14 11:48:28.664002 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 11:48:29.049411 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 11:48:29.049460 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 11:49:06.874052 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 11:49:06.926791 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 11:49:06.926820 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 11:49:21.535398 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 11:49:21.588041 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 11:49:21.588070 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 08:50:32.835729 2017] [wsgi:error] [pid 696:tid 139890832189184] [remote 127.0.0.1:39280] 442
+[Tue Nov 14 11:53:44.415257 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 11:53:44.618134 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 11:53:44.618164 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 11:55:29.659889 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 11:55:29.773801 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 11:55:29.773832 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 12:02:39.149424 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:02:39.210093 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:02:39.210122 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 12:04:58.145519 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:04:58.349700 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:04:58.349732 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 12:11:01.936431 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:11:02.745995 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:11:02.746037 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 12:16:01.735297 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:16:02.135926 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:16:02.135968 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 09:17:02.928032 2017] [wsgi:error] [pid 4898:tid 139890832189184] [remote 127.0.0.1:47472] 442
+[Tue Nov 14 12:20:44.725468 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:20:44.927253 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:20:44.927283 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'
+[Tue Nov 14 09:31:00.050805 2017] [wsgi:error] [pid 5604:tid 139890832189184] [remote 127.0.0.1:51318] /home/grupogua/webapps/colegios/colegios/colegios/../media/Documentos/santafe
+[Tue Nov 14 09:31:03.198468 2017] [wsgi:error] [pid 5603:tid 139890832189184] [remote 127.0.0.1:51322] 442
+[Tue Nov 14 09:36:13.686439 2017] [wsgi:error] [pid 5604:tid 139890832189184] [remote 127.0.0.1:52456] 442
+[Tue Nov 14 12:38:55.408779 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00298: SIGHUP received.  Attempting to restart
+[Tue Nov 14 12:38:55.609345 2017] [mpm_worker:notice] [pid 2488:tid 139891026818944] AH00292: Apache/2.4.23 (Unix) mod_wsgi/4.5.9 Python/2.7 configured -- resuming normal operations
+[Tue Nov 14 12:38:55.609405 2017] [core:notice] [pid 2488:tid 139891026818944] AH00094: Command line: '/home/grupogua/webapps/colegios/apache2/bin/httpd.worker -f /home/grupogua/webapps/colegios/apache2/conf/httpd.conf'

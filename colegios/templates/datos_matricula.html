@@ -1,0 +1,88 @@
+{% extends "index.html" %}
+{% load static from staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+<div class="col-xs-12 ">
+
+    <div class="list-group2">
+        <a href="#" class="list-group-item active">
+            <b>Detalles de Matrícula</b>         
+        </a>
+   </div>
+    <ul class="list-group ">
+     <div class=" datos_matriculado" style="width : 100%; height : 498px;overflow: auto; padding:10px;">         
+            <div class=" col-xs-12 ">
+            <br>
+                <table class="table">
+                    <tbody >
+                        <tr>
+                            <td class="labelMatr" colspan="2">Nombre y Apellido:</td>
+                            <td colspan="4"><h5>{{persona}}</h5></td>
+                            <td class="labelMatr" >Tipo y Nº Documento:</td>
+                            <td colspan="4"><h5>{{persona.get_tipo_doc_display}} {{persona.nro_documento}}</h5></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="labelMatr"  colspan="2">Fecha Nacimiento:</td>
+                            <td colspan="4"><h5>{{persona.fecha_nac|date:"d/m/Y" }}</h5></td>
+                            <td class="labelMatr" >CUIT/CUIL:</td>
+                            <td colspan="4" ><h5>{{persona.cuit_cuil}} </h5></td>
+                        </tr>                      
+                        <tr>
+                            <td class="labelMatr"  colspan="2">Teléfonos:</td>
+                            <td colspan="4"><h5>{{persona.telefono}} {{persona.domlegal_telefono}} </h5></td>
+                            <td class="labelMatr" >E-Mail:</td>
+                            <td colspan="4"><h5>{{persona.email}} </h5></td>
+                        </tr>
+                         <tr>
+                            <td class="labelMatr"  colspan="2">Domicilio Legal:</td>
+                            <td colspan="9"><h5>{{persona.domlegal_calle}} {{persona.domlegal_nro}} {{persona.domlegal_piso}} {{persona.domlegal_dpto}} - ({{persona.domlegal_codpostal}}) {{persona.domlegal_localidad}} - {{persona.get_domlegal_id_provincia_display}}</h5></td>                          
+                        </tr>
+                         <tr>
+                            <td class="labelMatr"  colspan="2">Domicilio Real:</td>
+                            <td colspan="9"><h5>{{persona.domreal_calle}} {{persona.domreal_nro}} {{persona.domreal_piso}} {{persona.domreal_dpto}} - ({{persona.domreal_codpostal}}) {{persona.domreal_localidad}} - {{persona.get_domreal_id_provincia_display}}</h5></td>                          
+                        </tr>
+                        <tr>
+                            <td class="labelMatr" colspan="2">Matrícula:</td>
+                            <td colspan="2"><h5>{{matricula.nro_matricula}} ({{matricula.tipo_matricula}}) </h5></td>                            
+                            <td class="labelMatr">Folio:</td>
+                            <td><h5>{{matricula.folio }} </h5></td>                            
+                            <td class="labelMatr">Libro:</td>
+                            <td><h5>{{matricula.libro }} </h5></td>                            
+                            <td class="labelMatr">Fecha Alta:</td>
+                            <td><h5>{{matricula.fecha_alta|date:"d/m/Y" }} </h5></td>                            
+                        </tr>                        
+                        <tr>                            
+                            <td class="labelMatr"  colspan="2">Título:</td>
+                            <td colspan="9"><h5>{{matricula.titulo}} </h5></td>
+                        </tr>
+                        <tr>                            
+                            <td class="labelMatr"  colspan="2">Fecha Título:</td>
+                            <td colspan="4"><h5>{{matricula.fecha_titulo|date:"d/m/Y" }} </h5></td>
+                            <td class="labelMatr"  colspan="2" >Fecha Fin:</td>
+                            <td><h5>{{matricula.fecha_finalizacion|date:"d/m/Y" }} </h5></td>
+                        </tr>
+                        <tr>                            
+                            <td class="labelMatr"  colspan="2">Facultad:</td>
+                            <td colspan="9"><h5>{{matricula.facultad}} </h5></td>                           
+                        </tr>
+                        <tr> 
+                            <td class="labelMatr"  colspan="2">Universidad:</td>
+                            <td colspan="9"><h5>{{matricula.universidad}} </h5></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+        
+     
+     </div>
+     </ul>  
+</div>
+{% endblock main %}
+
+
+
+

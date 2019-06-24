@@ -1,0 +1,169 @@
+{% load static from staticfiles %}
+
+
+<html dir="ltr" lang="es">
+<head>
+<link rel="stylesheet" href="{% static 'css/boletas.css' %}" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Impresión Cuota {{cuota.id_tributo.descripcion|capfirst|default_if_none:'Mensual' }}</title>
+</head>
+<body>
+<table width="100%" height="723" border="0" cellspacing="0">
+  <tr>
+    <td width="20%" height="83" align="center">
+    {% if dirMuni %} <img src="{% static 'localidad/' %}{{dirMuni}}/logo_boleta.png" alt="InfoMunicipio" height="120" width="120" /> {% endif%}
+    </td>
+  <td width="60%" align="center" valign="middle"><p><span class="comuna_nombre">{{sitio.nombre }}</span><br />
+    <span class="comuna_datos">{{sitio.linea1}}<br />
+        {{sitio.linea2}}</span></p>
+  </td>
+    <td width="20%"  class="destino_cuerpo">
+      <table width="100" align="middle"  valign="middle" border="0" cellspacing="0">
+        <tr>
+          <td align="center" class="titulos">Nro. Cuota</td>
+        </tr>
+        <tr>
+          <td class="datos" align="center">{{cuota.id_cuota}}</td>
+        </tr>
+        <tr>
+          <td align="center" class="titulos">Período</td>
+        </tr>
+        <tr>
+          <td class="datos" align="center">{{cuota.periodo}} / {{cuota.anio}}</td>
+        </tr>
+        <tr>
+          <td align="center" class="titulos">Fecha Impresión</td>
+        </tr>
+        <tr>
+          <td class="datos" align="center">{{fecha|date:"d/m/Y"}}</td>
+        </tr>
+       {% if sitio.codigo_visible = 'S' %} 
+        <tr>
+          <td align="center" class="titulos">Cód. Pago Electrónico</td>
+        </tr>
+        <tr>
+          <td class="datos" align="center">{{cod_pagos}}</td>
+        </tr>
+      {% endif %}
+      </table>
+    </td>
+  </tr>
+ <tr valign="middle" >
+     <td  colspan="3" valign="middle" class="tituloBoleta"> 
+       <p>CUOTA {{cuota.id_tributo.descripcion|default_if_none:'MENSUAL'|upper}}</p>
+       </td>
+      
+  </tr>
+  <tr>
+    <td height="98" colspan="3" align="left" valign="middle">
+      <table width="100%" border="0" cellspacing="0" valign="middle">
+      <tr>             
+        <td width="50%" colspan="2" class="titulos">Nº Matrícula</td>
+        <td width="50%" class="titulos">Tipo Matrícula</td>
+        <td width="20%" class="titulos">Folio</td>
+        <td width="20%" class="titulos">Libro</td>
+        <td width="20%" class="titulos">Fecha Alta</td>
+        
+      </tr>
+      <tr>
+        <td class="datos" colspan="2">{{cuota.id_matricula.nro_matricula}}</td>
+        <td class="datos">{{cuota.id_matricula.tipo_matricula}}</td>
+        <td class="datos">{{cuota.id_matricula.folio}}</td>
+        <td class="datos">{{cuota.id_matricula.libro}}</td>
+        <td class="datos">{{cuota.id_matricula.fecha_alta|date:"d/m/Y"}}</td>
+      </tr>
+      <tr>
+        <td width="30%" class="titulos">Código</td>
+        <td colspan="4" class="titulos">Apellido y Nombre</td>
+        <td width="50%" class="titulos">Nº Documento</td>
+      </tr>
+      <tr>
+        <td  class="datos">{{cuota.id_persona.codigo_persona}}</td>
+        <td colspan="4"  class="datos">{{cuota.id_persona.apellido_nombre}}</td>
+        <td  class="datos">{{cuota.id_persona.nro_documento}}</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="titulos">Dirección</td>
+        <td width="70%" colspan="2" class="titulos">Localidad</td>
+        <td width="40%" class="titulos">Provincia</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="datos">{{cuota.id_persona.domlegal_calle}} {{cuota.id_persona.domlegal_nro}}  {{cuota.id_persona.domlegal_piso}}  {{cuota.id_persona.domlegal_dpto}}</td>
+        <td width="50%" colspan="2" class="datos">({{cuota.id_persona.domlegal_codpostal}}) {{cuota.id_persona.domlegal_localidad}}</td>
+        <td class="datos">{{cuota.id_persona.get_domlegal_id_provincia_display}}</td>
+      </tr>       
+      <tr>
+        <td width="30%" class="titulos">Nº Cuota</td>
+        <td width="30%" class="titulos">Período</td>
+        <td width="50%" class="titulos">1º Vencimiento</td>
+        <td width="50%" class="titulos">Importe 1º Vencim.</td>
+        <td width="50%" class="titulos">2º Vencimiento</td>
+        <td width="50%" class="titulos">Importe 2º Vencim.</td>
+      </tr>
+      <tr class="bordeAbajo">
+        <td class="datos">{{cuota.id_cuota}}</td>
+        <td class="datos">{{cuota.periodo}} / {{cuota.anio}}</td>
+        <td class="datos">{{vencimiento|date:"d/m/Y"}}</td>        
+        <td class="datos ">$ {{punit1}}</td>
+        <td class="datos">{{vencimiento2|date:"d/m/Y"}}</td>        
+        <td class="datos ">$ {{punit2}}</td>
+        </tr>
+
+     <tr height="49" >
+
+      <td height="49" colspan="6" >
+       <table width="100%" >
+          <tr>
+            <td width="100%">
+            <table width="100%"  cellspacing="0">
+              <br>
+              <tr >
+                 <td  colspan="6" class="subTituloBoleta"> 
+                   <p>COMPOSICIÓN / DETALLE CUOTA</p>     
+              </tr>
+              <tr>                
+                <td colspan="5" class="titulos">Detalle Concepto</td>     
+                <td class="titulos">Importe</td>
+              </tr>
+              {% for item in detalle_cuotas %}
+                <tr border="0.5" class="datos_cuotas" >                  
+                  <td colspan="5" class="datos">{{item.detalle}}</td>
+                  <td class="importe">$ {{item.importe_base}}</td>
+                </tr>
+              {% endfor %}
+              {% if interes1 > 0 %}                
+                <tr border="0.5" class="datos_cuotas" >
+                  <td colspan="5" class="datos">Actualización importe al {{fecha|date:"d/m/Y"}}</td>
+                  <td class="importe">$ {{interes1}}</td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td colspan="4" class="bordeArriba"></td>
+                <td colspan="1" class="detalleSubtotal">TOTAL CUOTA:</td>
+                <td colspan="1" class="importeSubtotal">$ {{punit1}}</td>                
+              </tr>
+            </table>      
+            </td>
+         </tr>
+      </table>  </td>
+    </tr>
+    </table>  
+
+    <tr>
+    <td height="80" colspan="3" align="center" valign="bottom" >
+      <br><br><br>
+      <img src="data:image/png;base64,{{codbar}}" >      
+      </td>
+   </tr>
+   <tr>
+    <td valign="bottom" height="80" colspan="3" align="center" valign="middle" class="CB">     
+      {{codigo}}
+      
+      </td>
+   </tr>
+
+</table>
+
+</body>
+</html>
